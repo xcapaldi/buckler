@@ -71,6 +71,7 @@ def format_reference(raw_ref, key):
     formatted_ref = ""
     # add the reference type
     formatted_ref += type
+    formatted_ref += '{'
     # and the new key
     formatted_ref += key
     formatted_ref += ',\n '
