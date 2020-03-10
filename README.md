@@ -1,5 +1,7 @@
 # Buckler
 
+![buckler.py](buckler.png?raw=true "buckler.py")
+
 CLI tool allowing an easy interface with the Crossref Commons package for natbib citation generation.
 
 ## TODO
