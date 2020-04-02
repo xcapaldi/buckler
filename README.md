@@ -7,6 +7,8 @@ CLI tool allowing an easy interface with the Crossref Commons package for natbib
 ```
 usage: buckler.py [-h] [-p PATH] [-c] source
 
+search crossref for given DOI to generate bibtex/natbib reference
+
 positional arguments:
   source                search for the reference info of the DOI or website
                         you input here
