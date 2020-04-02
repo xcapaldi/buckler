@@ -3,7 +3,7 @@ from sys import exit
 import crossref_commons.retrieval
 
 # parse the commandline input
-parser = argparse.ArgumentParser(description="search crossref for given DOI to generate bibtex/natbib reference")
+parser = argparse.ArgumentParser()
 parser.add_argument("source", type=str, help="search for the reference info of the DOI or website you input here")
 #parser.add_argument("-l", "--biblatex", help="save reference info in biblatex format", action="store_true")
 parser.add_argument("-p", "--path", type=str, help="write reference to the given file")
@@ -35,7 +35,7 @@ no_confirm = args.confirm
 def generate_key(raw_ref):
     """Generate a unique reference key using the last name of the first author, the year and the first non-trivial title word."""
     split_ref = raw_ref.split(', ')
-    
+
     for field in split_ref:
         if field[:6] == "author":
             last_name = field[8:].lower()
@@ -45,8 +45,8 @@ def generate_key(raw_ref):
             title = field[7:-1]
         else:
             pass
-    
-    key = last_name + year + first_word(title)
+
+        key = last_name + year + first_word(title)
     return key
 
 def first_word(title):
