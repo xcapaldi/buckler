@@ -57,7 +57,8 @@ def first_word(title):
 
     for word in split_title:
         if word.lower() not in articles and word.lower() not in prepositions:
-            return word.lower()
+            # '-' need to be removed for bibtex
+            return word.lower().replace('-', '')
 
 def format_reference(raw_ref, key):
     split_ref = raw_ref.split('}, ')
